@@ -1,0 +1,137 @@
+  // Place your key bindings in this file to override the defaults
+  [
+    {
+      "key": "ctrl+alt+b",
+      "command": "editor.action.insertSnippet",
+      "args": { "name": "Bold" },
+      "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    {
+      "key": "ctrl+alt+i",
+      "command": "editor.action.insertSnippet",
+      "args": { "name": "Italic" },
+      "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    {
+      "key": "ctrl+alt+s",
+      "command": "editor.action.insertSnippet",
+      "args": { "name": "Strikethrough" },
+      "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    {
+      "key": "ctrl+alt+e",
+      "command": "editor.action.insertSnippet",
+      "args": { "name": "Inline code" },
+      "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    {
+      "key": "ctrl+alt+q",
+      "command": "editor.action.insertSnippet",
+      "args": { "name": "Blockquote" },
+      "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    {
+      "key": "ctrl+alt+u",
+      "command": "editor.action.insertSnippet",
+      "args": { "name": "Unordered list" },
+      "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    {
+      "key": "ctrl+alt+o",
+      "command": "editor.action.insertSnippet",
+      "args": { "name": "Ordered list" },
+      "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    {
+      "key": "ctrl+alt+1",
+      "command": "editor.action.insertSnippet",
+      "args": { "name": "Heading 1" },
+      "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    {
+      "key": "ctrl+alt+2",
+      "command": "editor.action.insertSnippet",
+      "args": { "name": "Heading 2" },
+      "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    {
+      "key": "ctrl+alt+3",
+      "command": "editor.action.insertSnippet",
+      "args": { "name": "Heading 3" },
+      "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    {
+      "key": "ctrl+alt+l",
+      "command": "editor.action.insertSnippet",
+      "args": { "name": "Link" },
+      "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    {
+      "key": "ctrl+alt+m",
+      "command": "editor.action.insertSnippet",
+      "args": { "name": "Image" },
+      "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    {
+      "key": "ctrl+alt+c",
+      "command": "editor.action.insertSnippet",
+      "args": { "name": "Code block" },
+      "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    {
+      "key": "ctrl+alt+x",
+      "command": "editor.action.insertSnippet",
+      "args": { "name": "Checkbox" },
+      "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    {
+      "key": "ctrl+alt+t",
+      "command": "editor.action.insertSnippet",
+      "args": { "name": "Simple table" },
+      "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    {
+      "key": "ctrl+h",
+      "command": "cursorDown",
+      "when": "editorTextFocus"
+    },
+    {
+      "key": "ctrl+j",
+      "command": "cursorUp",
+      "when": "editorTextFocus"
+    },
+    {
+      "key": "ctrl+d",
+      "command": "editor.action.addSelectionToNextFindMatch",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+d",
+      "command": "editor.action.addSelectionToNextFindMatch",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+shift+e",
+      "command": "editor.action.smartSelect.expand",
+      "when": "editorTextFocus"
+    },
+    {
+      "key": "ctrl+alt+e",
+      "command": "editor.action.smartSelect.shrink",
+      "when": "editorTextFocus"
+    },
+    {
+      "key": "ctrl+shift+t",
+      "command": "editor.emmet.action.matchTag",
+      "when": "editorTextFocus && editorLangId == 'html'"
+    },
+    {
+      "key": "ctrl+shift+w",
+      "command": "-workbench.action.closeActiveEditor"
+    },  
+    {
+      "key": "ctrl+up",
+      "command": "multiCommand.ctrlSelectLineUp",
+      "when": "editorTextFocus"
+    },
+  ]

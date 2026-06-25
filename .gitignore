@@ -1,0 +1,29 @@
+# ================= VS CODE CORE =================
+**/globalStorage/
+**/workspaceStorage/
+**/History/
+**/profiles/
+
+# SQLite / caches de extensões
+*.vscdb
+*.vscdb.backup
+*.sqlite
+*.db
+
+# Java / Red Hat / Eclipse JDT
+**/redhat.java/
+**/jdt_ws/
+**/.metadata/
+
+# Cache pesado de extensões
+**/chrome/
+**/GPUCache/
+**/cache/
+
+# Logs / temporários
+*.log
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db

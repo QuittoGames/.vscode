@@ -1,0 +1,347 @@
+{
+    // ================= VSCODE =================
+    "database-client.autoSync": true,
+    "workbench.iconTheme": "material-icon-theme",
+
+    "editor.fontFamily": "Consolas, 'Courier New', monospace",
+
+    "explorer.confirmDelete": false,
+    "extensions.autoUpdate": "off",
+    "workbench.startupEditor": "none",
+
+    // ================= EDITOR CORE =================
+    "multiCommand.commands": [
+        {
+            "command": "multiCommand.ctrlSelectLineUp",
+            "sequence": [
+                "cursorHome",
+                "cursorEndSelect"
+            ]
+        },
+        {
+            "command": "multiCommand.duplicateDown",
+            "sequence": [
+                "editor.action.copyLinesDownAction"
+            ]
+        },
+        {
+            "command": "multiCommand.selectLineUpContinuous",
+            "sequence": [
+                "cursorUpSelect"
+            ]
+        },
+        {
+            "command": "multiCommand.ctrlDOne",
+            "sequence": [
+                "removeSecondaryCursors",
+                "editor.action.addSelectionToNextFindMatch"
+            ]
+        }
+
+    ],
+
+    "editor.codeLens": true,
+    "editor.colorDecoratorsActivatedOn": "hover",
+    "editor.inlayHints.enabled": "on",
+    "editor.linkedEditing": true,
+    "editor.rulers": [
+        {
+            "column": 80,
+            "color": "#00FF0010"
+        },
+        {
+            "column": 100,
+            "color": "#BDB76B15"
+        },
+        {
+            "column": 120,
+            "color": "#FA807219"
+        }
+    ],
+
+    "editor.unicodeHighlight.includeComments": true,
+    "editor.wordWrap": "off",
+
+    // ================= WORKBENCH =================
+    "workbench.colorTheme": "Visual Studio Dark - C++",
+
+    "workbench.colorCustomizations": {
+        "[Default Dark Modern]": {
+            "tab.activeBorderTop": "#00FF00",
+            "tab.unfocusedActiveBorderTop": "#00FF0088",
+            "textCodeBlock.background": "#00000055"
+        },
+        "editor.wordHighlightStrongBorder": "#FF6347",
+        "editor.wordHighlightBorder": "#FFD700",
+        "editor.selectionHighlightBorder": "#A9A9A9"
+    },
+    "workbench.editor.revealIfOpen": true,
+    "files.eol": "\n",
+    "[bat]": {
+        "files.eol": "\r\n"
+    },
+    "emmet.variables": {
+        "lang": "pt"
+    },
+
+    // ================= FILE =================
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.autoGuessEncoding": true,
+
+
+    // ================= PYTHON =================
+    "python.createEnvironment.trigger": "off",
+    "python.defaultInterpreterPath": "C:\\Users\\Quitto\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+
+    // ================= DATABASE (MSSQL / DATABASE CLIENT) =================
+    "mssql.connections": [],
+    "mssql.connectionGroups": [
+        {
+            "name": "ROOT",
+            "id": "67933EDC-FDC3-44D4-810B-7B0001A14FDD"
+        }
+    ],
+
+    // ================= SECURITY =================
+    "security.workspace.trust.untrustedFiles": "open",
+    "security.promptForLocalFileProtocolHandling": false,
+    "editor.unicodeHighlight.includeStrings": true,
+    "editor.renderControlCharacters": false,
+
+    // ================= GIT =================
+    "git.autofetch": true,
+    "git.openRepositoryInParentFolders": "never",
+
+    // ================= C++ / C =================
+    "C_Cpp.default.compilerPath": "C:/mingw64/bin/g++.exe",
+    "C_Cpp.intelliSenseEngine": "default",
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
+
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.autocomplete": "Default",
+    "C_Cpp.formatting": "clangFormat",
+
+    // ================= LIVE SERVER =================
+    "liveServer.settings.CustomBrowser": "firefox",
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+    "liveServer.settings.wait": 500,
+
+    // ================= CODE RUNNER =================
+    "code-runner.executorMap": {
+        "rust": "cd $dir && rustc $fileName && .\\$fileNameWithoutExt.exe"
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.clearPreviousOutput": true,
+
+    "code-runner.ignoreSelection": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.fileDirectoryAsCwd": true,
+    "code-runner.preserveFocus": false,
+
+    // ================= PERFORMANCE =================
+    "editor.minimap.enabled": false,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "terminal.integrated.enablePersistentSessions": false,
+
+    // ================= DRAW.IO =================
+    "hediet.vscode-drawio.resizeImages": null,
+    "hediet.vscode-drawio.theme": "min",
+    "hediet.vscode-drawio.appearance": "dark",
+
+    // ================= IA COPLIT =================
+    "editor.inlineSuggest.enabled": false,
+
+    "chat.mcp.discovery.enabled": {
+        "claude-desktop": true,
+        "windsurf": true,
+        "cursor-global": true,
+        "cursor-workspace": true
+    },
+
+    "chat.alternativeToolAction.enabled": true,
+    "chat.mcp.gallery.enabled": true,
+    "chat.mcp.serverSampling": {
+        "enabled": true,
+        "mode": "conservative",
+        "Global in Code: local-filesystem": {
+            "allowedModels": [
+                "copilot/claude-opus-4.6",
+                "copilot/gemini-2.5-pro",
+                "copilot/gemini-3-pro-preview",
+                "copilot/gpt-4o",
+                "copilot/gpt-5-mini",
+                "copilot/gpt-5.2"
+            ]
+        }
+    },
+
+    "chat.viewSessions.orientation": "stacked",
+
+    // ================= VSCORD =================
+    "vscord.app.privacyMode.enable": true,
+    "vscord.status.workspace.enabled": false,
+    "vscord.status.problems.enabled": false,
+    "vscord.status.state.debugging.enabled": false,
+    "vscord.status.state.idle.enabled": false,
+
+    "vscord.status.image.small.viewing.text": "Conding ☕ {app_name}",
+    "vscord.status.image.large.editing.text": "Conding in {LANG} file",
+
+    "vscord.status.details.text.viewing": "☕️ Coding in {app_name}",
+    "vscord.status.state.text.editing": "☕️ Coding in {LANG}",
+    "vscord.status.state.text.debugging": "☕️ Coding in {app_name}",
+    "vscord.status.state.text.idle": "☕️ Coding in {LANG}",
+
+    "update.showReleaseNotes": false,
+
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.chat.tools.memory.enabled": true,
+
+    // ================= JAVA =================
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "support.type.log-level.error.tomcat",
+                "settings": {
+                    "foreground": "#D32F2F",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": "support.type.log-level.warn.tomcat",
+                "settings": {
+                    "foreground": "#FF6B6B"
+                }
+            },
+            {
+                "scope": "support.type.log-level.success.tomcat",
+                "settings": {
+                    "foreground": "#73C991"
+                }
+            }
+        ]
+    },
+
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-21",
+            "path": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.10.7-hotspot",
+            "default": true
+        },
+        {
+            "name": "JavaSE-25",
+            "path": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot"
+        }
+    ],
+
+    "java.completion.filteredTypes": [
+        "org.stringtemplate.*"
+    ],
+
+    "jdk.jdkhome": "C:\\Program Files\\Java\\jdk-21.0.10",
+    "redhat.telemetry.enabled": false,
+    "jdk.telemetry.enabled": false,
+    "java.help.collectErrorLog": true,
+    "java.jdt.ls.vmargs": "-Xmx3G -Xms512m",
+    "java.compile.nullAnalysis.mode": "disabled",
+
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "java.compile.unusedLocal": "ignore",
+    "java.compile.unusedPrivate": "ignore",
+    "java.compile.unusedImport": "warning",
+    "java.compile.deadCode": "warning",
+    "java.compile.unusedParameter": "warning",
+    "java.referencesCodeLens.enabled": true,
+    "java.implementationsCodeLens.enabled": true,
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.debug.settings.hotCodeReplace": "auto",
+    "java.dependency.packagePresentation": "hierarchical",
+    "java.maxConcurrentBuilds": 8,
+    "java.sources.organizeImports.staticStarThreshold": 1,
+
+    "spring.tools.codeLens.enabled": true,
+
+    "java.test.config": {
+        "vmArgs": [
+            "-Dstdout.encoding=UTF-8",
+            "-Dstderr.encoding=UTF-8"
+        ]
+    },
+
+    "maven.terminal.customEnv": [
+        {
+            "environmentVariable": "JAVA_HOME",
+            "value": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.10.7-hotspot"
+        }
+    ],
+
+    // ================= TERMINAL =================
+    "terminal.integrated.sendKeybindingsToShell": false,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.tabs.hideCondition": "never",
+    "terminal.integrated.shellIntegration.enabled": true,
+    "terminal.integrated.profiles.windows": {
+        "Command Prompt": {
+            "path": "C:\\Windows\\System32\\cmd.exe",
+            "args": ["/k", "chcp 65001"],
+            "icon": "terminal"
+        },
+
+        "JavaSE-21 LTS": {
+            "path": "C:\\Windows\\System32\\cmd.exe",
+            "args": ["/k", "chcp 65001"],
+            "env": {
+                "JAVA_HOME": "C:\\Program Files\\Java\\jdk-21.0.10",
+                "PATH": "C:\\Program Files\\Java\\jdk-21.0.10\\bin;${env:PATH}",
+                "JAVA_TOOL_OPTIONS": "-Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8"
+            }
+        },
+
+        "JavaSE-25 LTS": {
+            "path": "C:\\Windows\\System32\\cmd.exe",
+            "args": ["/k", "chcp 65001"],
+            "env": {
+                "JAVA_HOME": "C:\\Program Files\\Java\\jdk-25.0.2",
+                "PATH": "C:\\Program Files\\Java\\jdk-25.0.2\\bin;${env:PATH}",
+                "JAVA_TOOL_OPTIONS": "-Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8"
+            }
+        }
+    },
+    "terminal.integrated.automationProfile.windows": {
+        "path": "cmd"
+    },
+
+    // ================= CSPELL =================
+    "cSpell.diagnosticLevel": "Hint",
+
+    // ================= TRAILING SPACES =================
+    "trailing-spaces.backgroundColor": "rgba(255,0,0,0.1)",
+    "trailing-spaces.includeEmptyLines": false,
+
+    // ================= POWERSHELL =================
+    "powershell.promptToUpdatePowerShell": false,
+
+    // ================= MARKDOWN =================
+    "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+    "[markdown]": {
+        "editor.wordWrap": "on"
+    },
+    "[plaintext]": {
+        "editor.wordWrap": "on"
+    },
+
+    // ================= QUARTO =================
+    "[quarto]": {
+        "editor.wordWrap": "bounded",
+        "editor.wordWrapColumn": 100
+    },
+    "quarto.render.renderOnSave": false,
+
+    "code-runner.executorMapByFileExtension": {
+        ".qmd": "D:\\Research\\ABNT\\abnt.bat \"$fullFileName\""
+    }
+}

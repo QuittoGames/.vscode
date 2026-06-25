@@ -1,0 +1,31 @@
+{
+  "println": {
+    "prefix": "println",
+    "body": [
+      "System.out.println($1);"
+    ],
+    "description": "Print line shortcut"
+  },
+    "msglog": {
+        "prefix": "msglog",
+        "body": [
+            "System.out.println(\"[${1|ERROR,WARN,INFO,DEBUG|}] ${2:MSG}: \" + ${3:ErrorParam});"
+        ],
+        "description": "Log message with type, message and param"
+    },
+    "list": {
+    "prefix": "list",
+    "body": [
+      "List<${1:String}> ${2:list} = new ArrayList<>();"
+    ],
+    "description": "Create ArrayList"
+  },
+
+  "map": {
+    "prefix": "map",
+    "body": [
+      "Map<${1:String}, ${2:Object}> ${3:map} = new HashMap<>();"
+    ],
+    "description": "Create HashMap"
+  },
+}
