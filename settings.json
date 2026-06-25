@@ -13,31 +13,20 @@
     "multiCommand.commands": [
         {
             "command": "multiCommand.ctrlSelectLineUp",
-            "sequence": [
-                "cursorHome",
-                "cursorEndSelect"
-            ]
+            "sequence": ["cursorHome", "cursorEndSelect"]
         },
         {
             "command": "multiCommand.duplicateDown",
-            "sequence": [
-                "editor.action.copyLinesDownAction"
-            ]
+            "sequence": ["editor.action.copyLinesDownAction"]
         },
         {
             "command": "multiCommand.selectLineUpContinuous",
-            "sequence": [
-                "cursorUpSelect"
-            ]
+            "sequence": ["cursorUpSelect"]
         },
         {
             "command": "multiCommand.ctrlDOne",
-            "sequence": [
-                "removeSecondaryCursors",
-                "editor.action.addSelectionToNextFindMatch"
-            ]
+            "sequence": ["removeSecondaryCursors", "editor.action.addSelectionToNextFindMatch"]
         }
-
     ],
 
     "editor.codeLens": true,
@@ -61,6 +50,11 @@
 
     "editor.unicodeHighlight.includeComments": true,
     "editor.wordWrap": "off",
+
+    // ================= INDENT =================
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
 
     // ================= WORKBENCH =================
     "workbench.colorTheme": "Visual Studio Dark - C++",
@@ -89,7 +83,6 @@
     "files.trimTrailingWhitespace": true,
     "files.trimFinalNewlines": true,
     "files.autoGuessEncoding": true,
-
 
     // ================= PYTHON =================
     "python.createEnvironment.trigger": "off",
@@ -237,9 +230,7 @@
         }
     ],
 
-    "java.completion.filteredTypes": [
-        "org.stringtemplate.*"
-    ],
+    "java.completion.filteredTypes": ["org.stringtemplate.*"],
 
     "jdk.jdkhome": "C:\\Program Files\\Java\\jdk-21.0.10",
     "redhat.telemetry.enabled": false,
@@ -265,10 +256,7 @@
     "spring.tools.codeLens.enabled": true,
 
     "java.test.config": {
-        "vmArgs": [
-            "-Dstdout.encoding=UTF-8",
-            "-Dstderr.encoding=UTF-8"
-        ]
+        "vmArgs": ["-Dstdout.encoding=UTF-8", "-Dstderr.encoding=UTF-8"]
     },
 
     "maven.terminal.customEnv": [
@@ -343,5 +331,5 @@
 
     "code-runner.executorMapByFileExtension": {
         ".qmd": "D:\\Research\\ABNT\\abnt.bat \"$fullFileName\""
-    }
+    },
 }

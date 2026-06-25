@@ -14,7 +14,6 @@
         ],
         "description": "Header note"
     },
-
     "moc": {
         "prefix": "moc",
         "body": [
@@ -51,8 +50,7 @@
         ],
         "description": "Map of Content"
     },
-
-   "project": {
+    "project": {
         "prefix": "project",
         "body": [
             "---",
@@ -152,7 +150,6 @@
         ],
         "description": "Project documentation"
     },
-
     "book": {
         "prefix": "book",
         "body": [
@@ -174,7 +171,6 @@
         ],
         "description": "Book note"
     },
-
     "people_referece": {
         "prefix": "people_referece",
         "body": [
@@ -193,7 +189,6 @@
         ],
         "description": "Person note"
     },
-
     "reference": {
         "prefix": "reference",
         "body": [
@@ -211,7 +206,6 @@
         ],
         "description": "Reference note"
     },
-
     "roadmap": {
         "prefix": "roadmap",
         "body": [
@@ -227,7 +221,6 @@
         ],
         "description": "Roadmap"
     },
-
     "snippet": {
         "prefix": "snippet",
         "body": [
@@ -244,7 +237,6 @@
         ],
         "description": "Code snippet"
     },
-
     "task": {
         "prefix": "task",
         "body": [
@@ -259,7 +251,6 @@
         ],
         "description": "Task note"
     },
-
     "daily": {
         "prefix": "daily",
         "body": [
