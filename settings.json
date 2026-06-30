@@ -108,13 +108,26 @@
     "git.openRepositoryInParentFolders": "never",
 
     // ================= C++ / C =================
-    "C_Cpp.default.compilerPath": "C:/mingw64/bin/g++.exe",
+    "C_Cpp.default.compilerPath": "C:/msys64/ucrt64/bin/g++.exe",
     "C_Cpp.intelliSenseEngine": "default",
     "C_Cpp.default.intelliSenseMode": "gcc-x64",
 
     "C_Cpp.errorSquiggles": "enabled",
     "C_Cpp.autocomplete": "Default",
     "C_Cpp.formatting": "clangFormat",
+
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "\\.c$|\\.h$",
+                "cmd": "gcc main.c Object.c -o teste_classes"
+            },
+            {
+                "match": "\\.cpp$|\\.hpp$|\\.cc$",
+                "cmd": "g++ main.cpp Object.cpp -o teste_classes_cpp"
+            }
+        ]
+    },
 
     // ================= LIVE SERVER =================
     "liveServer.settings.CustomBrowser": "firefox",
@@ -230,7 +243,7 @@
         }
     ],
 
-    "java.completion.filteredTypes": ["org.stringtemplate.*"],
+    "java.completion.filteredTypes": ["org.stringtemplate.*","java.atw.List","sun.net.www.content.text.*"],
 
     "jdk.jdkhome": "C:\\Program Files\\Java\\jdk-21.0.10",
     "redhat.telemetry.enabled": false,
@@ -245,8 +258,8 @@
     "java.compile.unusedImport": "warning",
     "java.compile.deadCode": "warning",
     "java.compile.unusedParameter": "warning",
-    "java.referencesCodeLens.enabled": true,
-    "java.implementationsCodeLens.enabled": true,
+    "java.referencesCodeLens.enabled": false,
+    "java.implementationsCodeLens.enabled": false,
     "java.configuration.updateBuildConfiguration": "automatic",
     "java.debug.settings.hotCodeReplace": "auto",
     "java.dependency.packagePresentation": "hierarchical",

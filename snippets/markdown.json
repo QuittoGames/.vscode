@@ -270,5 +270,15 @@
             "## Aprendizados"
         ],
         "description": "Daily note"
+    },
+
+    "code": {
+        "prefix": "code",
+        "body": [
+            "```$0",
+            "$1",
+            "```"
+        ],
+        "description": "Code block with language + cursor inside"
     }
 }
