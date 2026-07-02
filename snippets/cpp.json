@@ -1,0 +1,13 @@
+{
+  "C++ Start": {
+    "prefix": "main_cpp",
+    "body": [
+      "#include <iostream>",
+      "",
+      "int main() {",
+      "    $1",
+      "}"
+    ],
+    "description": "C++ mínimo com iostream"
+  }
+}
