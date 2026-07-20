@@ -1,11 +1,4 @@
 {
-//   "println": {
-//     "prefix": "println",
-//     "body": [
-//       "System.out.println($1);"
-//     ],
-//     "description": "Print line shortcut"
-//   },
     "msglog": {
         "prefix": "msglog",
         "body": [
