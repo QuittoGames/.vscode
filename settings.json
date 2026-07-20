@@ -86,7 +86,7 @@
 
     // ================= PYTHON =================
     "python.createEnvironment.trigger": "off",
-    "python.defaultInterpreterPath": "C:\\Users\\Quitto\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "python.defaultInterpreterPath": "/usr/bin/python3",
 
     // ================= DATABASE (MSSQL / DATABASE CLIENT) =================
     "mssql.connections": [],
@@ -147,7 +147,7 @@
 
     // ================= CODE RUNNER =================
     "code-runner.executorMap": {
-        "rust": "cd $dir && rustc $fileName && .\\$fileNameWithoutExt.exe"
+        "rust": "cd $dir && rustc $fileName && ./$fileNameWithoutExt"
     },
     "code-runner.runInTerminal": true,
     "code-runner.clearPreviousOutput": true,
@@ -156,6 +156,76 @@
     "code-runner.saveFileBeforeRun": true,
     "code-runner.fileDirectoryAsCwd": true,
     "code-runner.preserveFocus": false,
+
+    // ================= FORMATTER =================
+    "prettier.enable": true,
+    "prettier.requireConfig": false,
+    "prettier.useEditorConfig": true,
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": false,
+    "prettier.printWidth": 120,
+    "prettier.arrowParens": "always",
+    "prettier.endOfLine": "lf",
+    "prettier.quoteProps": "as-needed",
+    "prettier.embeddedLanguageFormatting": "auto",
+    "prettier.proseWrap": "preserve",
+
+    "prettier.singleQuote": false,
+    "prettier.jsxSingleQuote": false,
+
+    "prettier.htmlWhitespaceSensitivity": "css",
+    "prettier.semi": true,
+
+    "prettier.trailingComma": "all",
+    "prettier.bracketSpacing": true,
+
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    },
+
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    },
+
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java",
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    },
+
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    },
+
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 
     // ================= PERFORMANCE =================
     "editor.minimap.enabled": false,
@@ -268,18 +338,18 @@
     "java.configuration.runtimes": [
         {
             "name": "JavaSE-21",
-            "path": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.10.7-hotspot",
+            "path": "/home/quitto/.sdkman/candidates/java/current",
             "default": true
         },
         {
             "name": "JavaSE-25",
-            "path": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.3.9-hotspot"
+            "path": "/home/quitto/.sdkman/candidates/java/current"
         }
     ],
 
     "java.completion.filteredTypes": ["org.stringtemplate.*","java.atw.List","sun.net.www.content.text.*"],
 
-    "jdk.jdkhome": "C:\\Program Files\\Java\\jdk-21.0.10",
+    "jdk.jdkhome": "/home/quitto/.sdkman/candidates/java/current",
     "redhat.telemetry.enabled": false,
     "jdk.telemetry.enabled": false,
     "java.help.collectErrorLog": true,
@@ -302,6 +372,8 @@
     "java.compile.unusedParameter": "warning",
     "java.referencesCodeLens.enabled": false,
     "java.implementationsCodeLens.enabled": false,
+    "java.referencesCodeLens.enabled": false,
+    "java.implementationsCodeLens.enabled": false,
     "java.configuration.updateBuildConfiguration": "automatic",
     "java.debug.settings.hotCodeReplace": "auto",
     "java.dependency.packagePresentation": "hierarchical",
@@ -317,45 +389,46 @@
     "maven.terminal.customEnv": [
         {
             "environmentVariable": "JAVA_HOME",
-            "value": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.10.7-hotspot"
+            "value": "/home/quitto/.sdkman/candidates/java/current"
         }
     ],
 
     // ================= TERMINAL =================
     "terminal.integrated.sendKeybindingsToShell": false,
-    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.fontFamily": "CaskaydiaMono Nerd Font",
     "terminal.integrated.gpuAcceleration": "on",
     "terminal.integrated.tabs.hideCondition": "never",
     "terminal.integrated.shellIntegration.enabled": true,
-    "terminal.integrated.profiles.windows": {
-        "Command Prompt": {
-            "path": "C:\\Windows\\System32\\cmd.exe",
-            "args": ["/k", "chcp 65001"],
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "/bin/bash",
+            "args": [],
             "icon": "terminal"
         },
 
         "JavaSE-21 LTS": {
-            "path": "C:\\Windows\\System32\\cmd.exe",
-            "args": ["/k", "chcp 65001"],
+            "path": "/bin/bash",
+            "args": [],
             "env": {
-                "JAVA_HOME": "C:\\Program Files\\Java\\jdk-21.0.10",
-                "PATH": "C:\\Program Files\\Java\\jdk-21.0.10\\bin;${env:PATH}",
+                "JAVA_HOME": "/home/quitto/.sdkman/candidates/java/current",
+                "PATH": "/home/quitto/.sdkman/candidates/java/current/bin:${env:PATH}",
                 "JAVA_TOOL_OPTIONS": "-Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8"
             }
         },
 
         "JavaSE-25 LTS": {
-            "path": "C:\\Windows\\System32\\cmd.exe",
-            "args": ["/k", "chcp 65001"],
+            "path": "/bin/bash",
+            "args": [],
             "env": {
-                "JAVA_HOME": "C:\\Program Files\\Java\\jdk-25.0.2",
-                "PATH": "C:\\Program Files\\Java\\jdk-25.0.2\\bin;${env:PATH}",
+                "JAVA_HOME": "/home/quitto/.sdkman/candidates/java/current",
+                "PATH": "/home/quitto/.sdkman/candidates/java/current/bin:${env:PATH}",
                 "JAVA_TOOL_OPTIONS": "-Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8"
             }
         }
     },
-    "terminal.integrated.automationProfile.windows": {
-        "path": "cmd"
+    "terminal.integrated.automationProfile.linux": {
+        "path": "bash"
     },
 
     // ================= CSPELL =================
@@ -385,7 +458,7 @@
     "quarto.render.renderOnSave": false,
 
     "code-runner.executorMapByFileExtension": {
-        ".qmd": "D:\\Research\\ABNT\\abnt.bat \"$fullFileName\""
+        ".qmd": "/home/quitto/Research/ABNT/abnt.sh \"$fullFileName\""
     },
 
     "yaml.disableSchemaDetection": [
