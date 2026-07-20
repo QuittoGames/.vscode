@@ -107,15 +107,29 @@
     "git.autofetch": true,
     "git.openRepositoryInParentFolders": "never",
 
+    "git.enableSmartCommit": true,
+    "git.suggestSmartCommit": false,
+
     // ================= C++ / C =================
     "C_Cpp.intelliSenseEngine": "default",
+
     "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
+    "C_Cpp.default.compilerPath": "C:/msys64/ucrt64/bin/gcc.exe",
 
     "C_Cpp.default.cStandard": "c17",
     "C_Cpp.default.cppStandard": "c++20",
 
-    // GCC padrão (IntelliSense usa esse)
-    "C_Cpp.default.compilerPath": "C:/msys64/ucrt64/bin/gcc.exe",
+    "C_Cpp.default.browse.limitSymbolsToIncludedHeaders": true,
+    "C_Cpp.default.preferredPathSeparator": "/",
+    "C_Cpp.errorSquiggles": "enabled",
+
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
+
+    "clangd.arguments": [
+        "--background-index",
+        "--clang-tidy",
+        "--completion-style=detailed"
+    ],
 
     // Associações de arquivos
     "files.associations": {
@@ -231,6 +245,12 @@
     "editor.minimap.enabled": false,
     "diffEditor.hideUnchangedRegions.enabled": true,
     "terminal.integrated.enablePersistentSessions": false,
+    "files.watcherExclude": {
+        "**/.git/**": true,
+        "**/node_modules/**": true,
+        "**/target/**": true,
+        "**/build/**": true
+    },
 
     // ================= DRAW.IO =================
     "hediet.vscode-drawio.resizeImages": null,
@@ -342,6 +362,11 @@
             "default": true
         },
         {
+            "name": "JavaSDK",
+            "path": "${env:JAVA_HOME}",
+            "default": false
+        },
+        {
             "name": "JavaSE-25",
             "path": "/home/quitto/.sdkman/candidates/java/current"
         }
@@ -359,6 +384,7 @@
     // Formater
     "java.format.settings.url": "file:///C:/Users/Quitto/AppData/Roaming/Code/User/formater/eclipse-formatter-custom.xml",
     "java.format.settings.profile": "QuittoStyle",
+
     "[java]": {
         "editor.defaultFormatter": "redhat.java",
         "editor.formatOnSave": false,
@@ -396,7 +422,7 @@
     // ================= TERMINAL =================
     "terminal.integrated.sendKeybindingsToShell": false,
     "terminal.integrated.defaultProfile.linux": "bash",
-    "terminal.integrated.fontFamily": "CaskaydiaMono Nerd Font",
+    "terminal.integrated.fontFamily": "'JetBrains Mono','FiraCode Nerd Font','CommitMono Nerd Font', monospace",
     "terminal.integrated.gpuAcceleration": "on",
     "terminal.integrated.tabs.hideCondition": "never",
     "terminal.integrated.shellIntegration.enabled": true,
