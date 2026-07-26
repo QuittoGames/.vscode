@@ -106,23 +106,20 @@
     // ================= GIT =================
     "git.autofetch": true,
     "git.openRepositoryInParentFolders": "never",
-
     "git.enableSmartCommit": true,
     "git.suggestSmartCommit": false,
 
     // ================= C++ / C =================
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
     "C_Cpp.intelliSenseEngine": "default",
-
-    "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
-    "C_Cpp.default.compilerPath": "C:/msys64/ucrt64/bin/gcc.exe",
-
+    "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
     "C_Cpp.default.cStandard": "c17",
     "C_Cpp.default.cppStandard": "c++20",
-
     "C_Cpp.default.browse.limitSymbolsToIncludedHeaders": true,
     "C_Cpp.default.preferredPathSeparator": "/",
     "C_Cpp.errorSquiggles": "enabled",
-
+    "C_Cpp.autocomplete": "Default",
+    "C_Cpp.formatting": "clangFormat",
     "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
 
     "clangd.arguments": [
@@ -137,18 +134,17 @@
         "*.hpp": "cpp",
         "*.tpp": "cpp"
     },
-    "makefile.configureOnOpen": true,
 
     // ================= Run On Save =================
     "emeraldwalk.runonsave": {
         "commands": [
             {
                 "match": "\\.c$",
-                "cmd": "gcc *.c -std=c17 -Wall -Wextra -g -o app.exe"
+                "cmd": "gcc *.c -std=c17 -Wall -Wextra -g -o app"
             },
             {
                 "match": "\\.cpp$|\\.cc$|\\.cxx$",
-                "cmd": "g++ *.cpp -std=c++20 -Wall -Wextra -g -o app.exe"
+                "cmd": "g++ *.cpp -std=c++20 -Wall -Wextra -g -o app"
             }
         ]
     },
@@ -210,7 +206,8 @@
     "[java]": {
         "editor.defaultFormatter": "redhat.java",
         "editor.tabSize": 4,
-        "editor.insertSpaces": true
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": false
     },
 
     "[rust]": {
@@ -287,28 +284,23 @@
     "chat.viewSessions.orientation": "stacked",
 
     // ================= CLINE =================
-        "cline.vsCodeLmModelSelector": {
-            "vendor": "copilot",
-            "family": "gpt-5"
-        },
-
-        "cline.mcp.enabled": true,
-
-        // mantém contexto maior
-        "cline.autoApprove": {
-            "enabled": false
-        },
-
-        // terminal
-        "cline.allowedCommands": [
-            "git",
-            "python",
-            "pip",
-            "npm",
-            "dnf",
-            "rpm",
-            "rpmbuild"
-        ],
+    "cline.vsCodeLmModelSelector": {
+        "vendor": "copilot",
+        "family": "gpt-5"
+    },
+    "cline.mcp.enabled": true,
+    "cline.autoApprove": {
+        "enabled": false
+    },
+    "cline.allowedCommands": [
+        "git",
+        "python",
+        "pip",
+        "npm",
+        "dnf",
+        "rpm",
+        "rpmbuild"
+    ],
 
     // ================= VSCORD =================
     "vscord.app.privacyMode.enable": true,
@@ -372,7 +364,7 @@
         }
     ],
 
-    "java.completion.filteredTypes": ["org.stringtemplate.*","java.atw.List","sun.net.www.content.text.*"],
+    "java.completion.filteredTypes": ["org.stringtemplate.*", "java.atw.List", "sun.net.www.content.text.*"],
 
     "jdk.jdkhome": "/home/quitto/.sdkman/candidates/java/current",
     "redhat.telemetry.enabled": false,
@@ -381,14 +373,9 @@
     "java.jdt.ls.vmargs": "-Xmx3G -Xms512m",
     "java.compile.nullAnalysis.mode": "disabled",
 
-    // Formater
-    "java.format.settings.url": "file:///C:/Users/Quitto/AppData/Roaming/Code/User/formater/eclipse-formatter-custom.xml",
+    // Formatter
+    "java.format.settings.url": "file:///home/quitto/.config/Code/User/formater/eclipse-formatter-custom.xml",
     "java.format.settings.profile": "QuittoStyle",
-
-    "[java]": {
-        "editor.defaultFormatter": "redhat.java",
-        "editor.formatOnSave": false,
-    },
 
     "java.errors.incompleteClasspath.severity": "ignore",
     "java.compile.unusedLocal": "ignore",
@@ -396,8 +383,6 @@
     "java.compile.unusedImport": "warning",
     "java.compile.deadCode": "warning",
     "java.compile.unusedParameter": "warning",
-    "java.referencesCodeLens.enabled": false,
-    "java.implementationsCodeLens.enabled": false,
     "java.referencesCodeLens.enabled": false,
     "java.implementationsCodeLens.enabled": false,
     "java.configuration.updateBuildConfiguration": "automatic",
@@ -486,6 +471,9 @@
     "code-runner.executorMapByFileExtension": {
         ".qmd": "/home/quitto/Research/ABNT/abnt.sh \"$fullFileName\""
     },
+    "makefile.configureOnOpen": true,
+    "explorer.confirmDragAndDrop": false,
+    "window.confirmSaveUntitledWorkspace": false,
 
     "yaml.disableSchemaDetection": [
         "**/.github/workflows/*.yml",

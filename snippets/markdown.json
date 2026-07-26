@@ -271,21 +271,36 @@
         ],
         "description": "Daily note"
     },
-    "code": {
+    "codeblock": {
         "prefix": "code",
         "body": [
-            "```$0",
-            "$1",
+            "```$1",
+            "$2",
             "```"
         ],
-        "description": "Code block with language + cursor inside"
+        "description": "Code block fence (markdown)"
     },
-    "img": {
+    "markdown-template": {
+        "prefix": "md",
+        "body": [
+            "---",
+            "title: $1",
+            "date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+            "tags: [$2]",
+            "---",
+            "",
+            "# $1",
+            "",
+            "$0"
+        ],
+        "description": "Markdown file header template"
+    },
+    "html-img": {
         "prefix": "img",
         "body": [
-            "<img src=\"$1\" alt=\"$2\" style=\"max-width: 100%; height: auto; display: block; margin: 0 auto;\" />"
+            "<img src=\"$1\" alt=\"$2\" width=\"$3\" height=\"$4\" loading=\"lazy\">$0"
         ],
-        "description": "HTML img tag"
+        "description": "HTML img tag (ready to use)"
     },
     "project_minimal": {
         "prefix": "project_minimal",
@@ -393,5 +408,5 @@
             "- "
         ],
         "description": "Coding AI agent documentation"
-    },
+    }
 }
