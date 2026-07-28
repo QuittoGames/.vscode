@@ -111,19 +111,8 @@
     "git.suggestSmartCommit": false,
 
     // ================= C++ / C =================
-    "C_Cpp.intelliSenseEngine": "default",
-
-    "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
-    "C_Cpp.default.compilerPath": "C:/msys64/ucrt64/bin/gcc.exe",
-
-    "C_Cpp.default.cStandard": "c17",
-    "C_Cpp.default.cppStandard": "c++20",
-
-    "C_Cpp.default.browse.limitSymbolsToIncludedHeaders": true,
-    "C_Cpp.default.preferredPathSeparator": "/",
-    "C_Cpp.errorSquiggles": "enabled",
-
-    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
+    "clangd.path": "C:/Program Files/LLVM/bin/clangd.exe",
+    "clangd.compilationDatabasePath": "${workspaceFolder}/build",
 
     "clangd.arguments": [
         "--background-index",
@@ -131,12 +120,21 @@
         "--completion-style=detailed"
     ],
 
-    // Associações de arquivos
+    "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.default.cppStandard": "c++20",
+
+    "C_Cpp.default.preferredPathSeparator": "/",
+
     "files.associations": {
         "*.h": "c",
         "*.hpp": "cpp",
         "*.tpp": "cpp"
     },
+
+    "cmake.configureSettings": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+    },
+
     "makefile.configureOnOpen": true,
 
     // ================= Run On Save =================
@@ -196,13 +194,13 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
 
     "[cpp]": {
-        "editor.defaultFormatter": "ms-vscode.cpptools",
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
         "editor.tabSize": 4,
         "editor.insertSpaces": true
     },
 
     "[c]": {
-        "editor.defaultFormatter": "ms-vscode.cpptools",
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
         "editor.tabSize": 4,
         "editor.insertSpaces": true
     },
@@ -495,4 +493,8 @@
         "**/.forgejo/workflows/*.yml",
         "**/.forgejo/workflows/*.yaml"
     ],
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "clangd.detectExtensionConflicts": false,
 }
