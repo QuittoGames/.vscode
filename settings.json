@@ -111,8 +111,8 @@
 
     // ================= C++ / C =================
     "C_Cpp.default.compilerPath": "/usr/bin/g++",
-    "C_Cpp.intelliSenseEngine": "default",
-    "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "C_Cpp.default.intelliSenseMode": "windows-clang-x86",
     "C_Cpp.default.cStandard": "c17",
     "C_Cpp.default.cppStandard": "c++20",
     "C_Cpp.default.browse.limitSymbolsToIncludedHeaders": true,
@@ -491,4 +491,7 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "clangd.detectExtensionConflicts": false,
+    "remote.SSH.remotePlatform": {
+        "quittoserver.tail038be4.ts.net": "linux"
+    },
 }
