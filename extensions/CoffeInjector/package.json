@@ -1,0 +1,36 @@
+{
+  "name": "coffeinjector",
+  "displayName": "CoffeInjector",
+  "description": "Injeta classes Java/Spring no construtor da classe Java aberta no editor (constructor injection, sem @Autowired).",
+  "version": "0.0.1",
+  "publisher": "quitto",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:springInjectClass.injectClass"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "springInjectClass.injectClass",
+        "title": "Inject Class"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "build": "node esbuild.js --production",
+    "test": "node --test \"test/*.test.js\""
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.20.2"
+  }
+}

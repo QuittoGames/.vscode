@@ -1,0 +1,15 @@
+# Dependências
+node_modules/
+
+# Build
+out/
+dist/
+
+# Empacotamento de extensão
+*.vsix
+
+# Testes de integração VS Code
+.vscode-test/
+
+# Logs
+*.log

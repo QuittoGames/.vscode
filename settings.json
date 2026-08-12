@@ -121,6 +121,7 @@
     "C_Cpp.autocomplete": "Default",
     "C_Cpp.formatting": "clangFormat",
     "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
+    "clangd.detectExtensionConflicts": false,
 
     "clangd.arguments": [
         "--background-index",
@@ -244,7 +245,6 @@
 
     // ================= PERFORMANCE =================
     "editor.minimap.enabled": false,
-    "diffEditor.hideUnchangedRegions.enabled": true,
     "terminal.integrated.enablePersistentSessions": false,
     "files.watcherExclude": {
         "**/.git/**": true,
@@ -490,7 +490,6 @@
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "clangd.detectExtensionConflicts": false,
     "remote.SSH.remotePlatform": {
         "quittoserver.tail038be4.ts.net": "linux"
     },
